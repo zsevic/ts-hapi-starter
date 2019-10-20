@@ -16,10 +16,14 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^18.4.0",
+    "@hapi/inert": "^5.2.2",
     "@hapi/joi": "^16.1.7",
+    "@hapi/vision": "^5.5.4",
     "dotenv": "^8.2.0",
+    "hapi-swagger": "^10.2.0",
     "sequelize": "^5.21.0",
-    "sqlite3": "^4.1.0"
+    "sqlite3": "^4.1.0",
+    "tsconfig-paths": "^3.9.0"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.28",

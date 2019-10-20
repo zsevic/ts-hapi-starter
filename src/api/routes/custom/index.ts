@@ -7,9 +7,12 @@ export default [{
   path: '/api/custom',
   handler: controller.getCustomListHandler,
   options: {
+    description: 'Get custom list',
+    notes: 'Returns a custom list',
     validate: {
       query: customQuery,
     },
+    tags: ['api'],
   },
 }, {
   method: 'GET',
