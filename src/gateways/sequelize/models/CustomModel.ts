@@ -1,5 +1,5 @@
 import { Model, DataTypes } from 'sequelize';
-import { Custom } from 'domain/entities/custom';
+import { Custom } from 'domain/entities/Custom';
 import { sequelize } from 'gateways/sequelize/connection';
 
 class CustomModel extends Model implements Custom {
