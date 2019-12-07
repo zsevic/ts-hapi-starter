@@ -1,8 +1,7 @@
-import * as hapi from '@hapi/hapi';
 import { Custom } from 'domain/entities/Custom';
 import { getCustomList } from 'domain/use_cases/getCustomList';
 
-export function getCustomListHandler(request: hapi.Request, h: hapi.ResponseToolkit):
+export function getCustomListHandler():
 Promise<Custom[]> {
   return getCustomList();
 }
