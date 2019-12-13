@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import { Custom } from 'domain/entities/Custom';
-import { sequelize } from 'gateways/sequelize/connection';
+import { sequelize } from 'gateways/database/connection';
 
 class CustomModel extends Model implements Custom {
     public name!: string;

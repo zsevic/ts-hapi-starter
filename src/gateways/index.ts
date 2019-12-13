@@ -1,3 +1,3 @@
-import { CustomRepository } from 'gateways/sequelize/repositories/CustomRepository';
+import { CustomRepository } from 'gateways/database/repositories/CustomRepository';
 
 export const customRepository: CustomRepository = new CustomRepository();
