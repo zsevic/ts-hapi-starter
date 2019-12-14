@@ -11,9 +11,9 @@ const server = new hapi.Server({
 });
 
 export const init = async (): Promise<void> => {
-  server.route(routes);
-
   await server.register(plugins);
+
+  server.route(routes);
 
   await server.start();
   console.log('Server running on %s', server.info.uri);

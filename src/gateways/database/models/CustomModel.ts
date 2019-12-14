@@ -3,7 +3,9 @@ import { Custom } from 'domain/entities/Custom';
 import { sequelize } from 'gateways/database/connection';
 
 class CustomModel extends Model implements Custom {
-    public name!: string;
+  public id!: string;
+
+  public name!: string;
 }
 
 CustomModel.init({
