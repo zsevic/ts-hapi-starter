@@ -3,7 +3,7 @@ import {
 } from 'typeorm';
 import { PostEntity } from './PostEntity';
 
-@Entity()
+@Entity({ name: 'author' })
 export class AuthorEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;

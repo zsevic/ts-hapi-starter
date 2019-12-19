@@ -4,16 +4,17 @@ import { plainToClass } from 'class-transformer';
 import { AuthorEntity, PostEntity } from 'gateways/database/entities';
 import { CreateAuthorDTO } from 'domain/dto';
 import { Author, Post } from 'domain/entities';
+import { connectionName } from 'gateways/database/connection';
 
 export class AuthorRepository {
   async getAuthorList(): Promise<Author[]> {
-    const authorList = await getRepository(AuthorEntity).find({ relations: ['posts'] });
+    const authorList = await getRepository(AuthorEntity, connectionName).find({ relations: ['posts'] });
 
     return plainToClass(Author, authorList);
   }
 
   async getPostList(authorId: string): Promise<Post[]> {
-    const postList = await getRepository(PostEntity).find({
+    const postList = await getRepository(PostEntity, connectionName).find({
       where: {
         authorId,
       },
@@ -23,7 +24,7 @@ export class AuthorRepository {
   }
 
   async createAuthor(author: CreateAuthorDTO): Promise<Author> {
-    const newAuthor = await getRepository(AuthorEntity).save(author);
+    const newAuthor = await getRepository(AuthorEntity, connectionName).save(author);
 
     return plainToClass(Author, newAuthor);
   }
