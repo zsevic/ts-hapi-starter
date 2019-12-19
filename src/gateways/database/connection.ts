@@ -1,4 +1,5 @@
 import { createConnection } from 'typeorm';
+
 export const connectionName = 'database';
 
 createConnection({
@@ -11,6 +12,6 @@ createConnection({
   synchronize: true,
 }).then(() => {
   console.log('Connection with database is established');
-}).catch(e => {
+}).catch((e) => {
   console.error(e);
-})
+});

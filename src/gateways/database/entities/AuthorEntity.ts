@@ -11,6 +11,6 @@ export class AuthorEntity {
   @Column()
   name: string;
 
-  @OneToMany((type) => PostEntity, (postEntity) => postEntity.author)
+  @OneToMany(() => PostEntity, (postEntity) => postEntity.author)
   posts: PostEntity;
 }

@@ -17,7 +17,7 @@ export class PostEntity {
   @Column()
   authorId: string;
 
-  @ManyToOne((type) => AuthorEntity, (authorEntity) => authorEntity.posts)
+  @ManyToOne(() => AuthorEntity, (authorEntity) => authorEntity.posts)
   @JoinColumn({ name: 'authorId' })
   author: AuthorEntity;
 }
