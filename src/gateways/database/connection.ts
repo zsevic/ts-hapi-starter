@@ -1,11 +1,10 @@
 import { createConnection } from 'typeorm';
+import ormConfig from 'root/ormconfig.json';
 
 createConnection({
+  ...ormConfig,
   type: 'sqlite',
   database: process.env.DATABASE_URL || 'database.sqlite',
-  entities: ['src/gateways/database/entities/*{.js,.ts}'],
-  synchronize: true,
-  logging: true,
 }).then(() => {
   console.log('Connection with database is established');
 });

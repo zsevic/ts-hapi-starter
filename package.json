@@ -8,6 +8,8 @@
     "dev": "NODE_PATH=./src nodemon --exec ts-node src/app.ts",
     "lint": "eslint src --ext ts",
     "lint-fix": "eslint src --ext ts --fix",
+    "migrate": "NODE_PATH=./src ts-node ./node_modules/typeorm/cli.js migration:run",
+    "migrate:down": "NODE_PATH=./src ts-node ./node_modules/typeorm/cli.js migration:revert",
     "start": "NODE_PATH=./dist/src node dist/src/app.js",
     "test": "jest -c test/jest.config.js"
   },

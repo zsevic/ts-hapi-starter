@@ -1,6 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
-import { AuthorEntity } from 'gateways/database/entities';
-import { Author } from 'domain/entities';
+import { AuthorEntity } from './AuthorEntity';
 
 @Entity()
 export class PostEntity {
