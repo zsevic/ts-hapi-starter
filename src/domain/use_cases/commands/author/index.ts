@@ -1,0 +1,1 @@
+export { createAuthor } from './createAuthor';

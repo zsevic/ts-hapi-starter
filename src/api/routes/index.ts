@@ -1,3 +1,4 @@
-import customRoutes from './custom';
+import authorRoutes from './author';
+import postRoutes from './post';
 
-export default [...customRoutes];
+export default [...authorRoutes, ...postRoutes];

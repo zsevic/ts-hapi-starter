@@ -1,7 +1,11 @@
-import { Sequelize } from 'sequelize';
+import { createConnection } from 'typeorm';
 
-export const sequelize = new Sequelize(process.env.DATABASE_URL || 'sqlite:database.sqlite', {
-  dialect: 'sqlite',
+createConnection({
+  type: 'sqlite',
+  database: process.env.DATABASE_URL || 'database.sqlite',
+  entities: ['src/gateways/database/entities/*{.js,.ts}'],
+  synchronize: true,
+  logging: true,
+}).then(() => {
+  console.log('Connection with database is established');
 });
-// TODO: migrations
-sequelize.sync();

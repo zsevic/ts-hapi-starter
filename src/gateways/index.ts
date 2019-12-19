@@ -1,3 +1,4 @@
-import { CustomRepository } from 'gateways/database/repositories/CustomRepository';
+import { AuthorRepository, PostRepository } from 'gateways/database/repositories';
 
-export const customRepository: CustomRepository = new CustomRepository();
+export const authorRepository: AuthorRepository = new AuthorRepository();
+export const postRepository: PostRepository = new PostRepository();
