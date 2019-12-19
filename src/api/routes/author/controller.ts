@@ -16,6 +16,6 @@ export async function createAuthorHandler(request: hapi.Request): Promise<Author
 
 export async function getPostListHandler(request: hapi.Request): Promise<Post[]> {
   const { authorId } = request.params;
-  
+
   return getPostList(authorId);
 }

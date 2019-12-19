@@ -1,4 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
+import {
+  Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn,
+} from 'typeorm';
 import { AuthorEntity } from './AuthorEntity';
 
 @Entity()
@@ -15,7 +17,7 @@ export class PostEntity {
   @Column()
   authorId: string;
 
-  @ManyToOne(type => AuthorEntity, authorEntity => authorEntity.posts)
+  @ManyToOne((type) => AuthorEntity, (authorEntity) => authorEntity.posts)
   @JoinColumn({ name: 'authorId' })
   author: AuthorEntity;
 }

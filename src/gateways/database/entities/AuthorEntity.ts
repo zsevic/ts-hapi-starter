@@ -1,4 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import {
+  Entity, PrimaryGeneratedColumn, Column, OneToMany,
+} from 'typeorm';
 import { PostEntity } from './PostEntity';
 
 @Entity()
@@ -9,6 +11,6 @@ export class AuthorEntity {
   @Column()
   name: string;
 
-  @OneToMany(type => PostEntity, postEntity => postEntity.author)
+  @OneToMany((type) => PostEntity, (postEntity) => postEntity.author)
   posts: PostEntity;
 }
