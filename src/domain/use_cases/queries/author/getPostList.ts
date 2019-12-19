@@ -1,7 +1,6 @@
-import { Author } from 'domain/entities';
+import { Post } from 'domain/entities';
 import { authorRepository } from 'gateways';
-import { PostEntity } from 'gateways/database/entities';
 
-export async function getPostList(authorId: string): Promise<PostEntity[]> {
+export async function getPostList(authorId: string): Promise<Post[]> {
   return authorRepository.getPostList(authorId);
 }
