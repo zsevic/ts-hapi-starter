@@ -27,9 +27,12 @@ npm test
 ### :arrow_right: Usage
 
 ```
-GET /
-GET /api/custom
+GET /api/authors
+POST /api/authors
+GET /api/authors/{authorId}/posts
+GET /api/posts
+POST /api/posts
 ```
 
 ### :package: Technologies used
-* Node.js, TypeScript, Hapi, SQLite
+* Node.js, TypeScript, Hapi, TypeORM, SQLite
