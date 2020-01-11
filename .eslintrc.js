@@ -21,9 +21,9 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    '@typescript-eslint/no-var-requires': 'off',
     'class-methods-use-this': 'off',
     'import/prefer-default-export': 'off',
-    'no-console': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -34,6 +34,7 @@ module.exports = {
         'tsx': 'never',
       },
     ],
+    'no-console': 'off',
   },
   settings: {
     'import/resolver': {
