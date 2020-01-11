@@ -25,11 +25,6 @@ describe('Author API tests', () => {
           name: 'post 2 name',
           text: 'post 2 text',
           authorId: 'ff64b6b7-deb6-425c-8511-fdc3666c4add',
-        }, {
-          id: 'e9408c4a-e4a0-4136-b1f6-c79cec6bedac',
-          name: 'post name',
-          text: 'post text',
-          authorId: 'ff64b6b7-deb6-425c-8511-fdc3666c4add',
         }],
       }];
 
