@@ -7,8 +7,14 @@ import { PostEntity } from 'gateways/database/entities';
 import { connectionName } from 'gateways/database/connection';
 
 export class PostRepository {
-  async getPostList(): Promise<Post[]> {
-    const postList = await getRepository(PostEntity, connectionName).find({ relations: ['author'] });
+  async getPostList(authorId?: string): Promise<Post[]> {
+    const postList = await getRepository(PostEntity, connectionName).find({
+      where: {
+        ...(authorId && { authorId }),
+      },
+      relations: ['author'],
+      select: ['id', 'name', 'text'],
+    });
 
     return plainToClass(Post, postList);
   }
