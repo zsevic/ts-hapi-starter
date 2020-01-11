@@ -16,6 +16,8 @@
     "seed:down": "npm run typeorm -- migration:revert -c seed",
     "start": "NODE_PATH=./dist/src node dist/src/app.js",
     "test": "jest -c test/jest.config.js",
+    "pretest:integration": "npm run migrate",
+    "test:integration": "jest -c test/jest.integration.config.js",
     "typeorm": "NODE_PATH=./src ts-node ./node_modules/typeorm/cli.js"
   },
   "keywords": [],

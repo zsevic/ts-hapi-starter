@@ -39,8 +39,6 @@ module.exports = [
     type: 'sqlite',
     database: 'database.sqlite',
     entities: ['src/gateways/database/entities/*{.js,.ts}'],
-    migrations: ['database/migrations/*{.js,.ts}'],
-    migrationsTableName: 'migrations',
     logging: false,
     synchronize: false,
   },
