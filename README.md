@@ -31,6 +31,7 @@ npm run lint:fix
 
 ```bash
 npm test
+npm run test:integration
 ```
 
 ### Migrations
@@ -63,5 +64,5 @@ POST /api/posts
 
 API documentation is generated using [hapi-swagger](https://www.npmjs.com/package/hapi-swagger) plugin at `/api-docs` endpoint
 
-## :package: Technologies used
+## Technologies used
 * Node.js, TypeScript, Hapi, TypeORM, SQLite
