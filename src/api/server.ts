@@ -1,10 +1,11 @@
 import hapi from '@hapi/hapi';
 import plugins from 'api/plugins';
 import routes from 'api/routes';
+import config from 'config';
 
-const server = new hapi.Server({
-  port: process.env.PORT || 8080,
-  host: 'localhost',
+export const server = new hapi.Server({
+  port: config.PORT,
+  host: config.HOST,
   routes: {
     cors: true,
   },

@@ -9,5 +9,5 @@ export const authorSchema = Joi.object({
 });
 
 export const authorParam = Joi.object({
-  authorId: Joi.string().required(),
+  authorId: Joi.string().guid().required(),
 });

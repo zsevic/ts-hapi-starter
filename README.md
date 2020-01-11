@@ -1,7 +1,9 @@
 # ts-hapi-starter
 > Minimal Hapi/TypeScript boilerplate
 
-### :wrench: Setup
+## Getting started
+
+### Setup
 
 ```bash
 git clone https://github.com/zsevic/ts-hapi-starter
@@ -11,20 +13,43 @@ npm i
 npm run dev
 ```
 
-### :construction_worker: Build
+### Build
 
 ```bash
 npm run build
 npm start
 ```
 
-### :rotating_light: Testing
+### Linting
+
+```bash
+npm run lint
+npm run lint:fix
+```
+
+### Testing
 
 ```bash
 npm test
 ```
 
-### :arrow_right: Usage
+### Migrations
+
+```bash
+npm run migration:generate <MIGRATION_NAME>
+npm run migrate
+npm run migrate:down
+```
+
+### Seeders
+
+```bash
+npm run seed:generate <SEEDER_NAME>
+npm run seed
+npm run seed:down
+```
+
+## Usage
 
 ```
 GET /api/authors
@@ -34,5 +59,9 @@ GET /api/posts
 POST /api/posts
 ```
 
-### :package: Technologies used
+## API documentation
+
+API documentation is generated using [hapi-swagger](https://www.npmjs.com/package/hapi-swagger) plugin at `/api-docs` endpoint
+
+## :package: Technologies used
 * Node.js, TypeScript, Hapi, TypeORM, SQLite

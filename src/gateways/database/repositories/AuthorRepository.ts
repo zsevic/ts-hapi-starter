@@ -1,9 +1,9 @@
 /* eslint-disable class-methods-use-this */
 import { getRepository } from 'typeorm';
 import { plainToClass } from 'class-transformer';
-import { AuthorEntity, PostEntity } from 'gateways/database/entities';
+import { AuthorEntity } from 'gateways/database/entities';
 import { CreateAuthorDTO } from 'domain/dto';
-import { Author, Post } from 'domain/entities';
+import { Author } from 'domain/entities';
 import { connectionName } from 'gateways/database/connection';
 
 export class AuthorRepository {
@@ -11,16 +11,6 @@ export class AuthorRepository {
     const authorList = await getRepository(AuthorEntity, connectionName).find({ relations: ['posts'] });
 
     return plainToClass(Author, authorList);
-  }
-
-  async getPostList(authorId: string): Promise<Post[]> {
-    const postList = await getRepository(PostEntity, connectionName).find({
-      where: {
-        authorId,
-      },
-    });
-
-    return plainToClass(Post, postList);
   }
 
   async createAuthor(author: CreateAuthorDTO): Promise<Author> {

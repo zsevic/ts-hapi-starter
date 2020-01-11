@@ -7,7 +7,7 @@ export class Post {
 
   readonly text: string;
 
-  readonly authorId: string;
+  readonly authorId?: string;
 
   readonly author?: Author;
 }
