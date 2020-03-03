@@ -1,13 +1,23 @@
-import hapi from '@hapi/hapi';
+import {
+  Server, Request, ResponseToolkit, Lifecycle,
+} from '@hapi/hapi';
 import plugins from 'api/plugins';
 import routes from 'api/routes';
 import config from 'config';
 
-export const server = new hapi.Server({
+export const server = new Server({
   port: config.PORT,
   host: config.HOST,
   routes: {
     cors: true,
+    validate: {
+      failAction: (request: Request, h: ResponseToolkit, err: Error): Lifecycle.Method => {
+        throw err;
+      },
+      options: {
+        abortEarly: false,
+      },
+    },
   },
 });
 
