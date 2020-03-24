@@ -1,4 +1,5 @@
 # ts-hapi-starter
+
 > Minimal Hapi/TypeScript boilerplate
 
 ## Getting started
@@ -10,6 +11,8 @@ git clone https://github.com/zsevic/ts-hapi-starter
 cd ts-hapi-starter
 cp .env.sample .env # change values after copying
 npm i
+npm run migrate
+npm run seed
 npm run dev
 ```
 
